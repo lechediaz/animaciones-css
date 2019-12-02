@@ -1,0 +1,450 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body>div {
+    background-color: rgb(211, 47, 47);
+    color: white;
+    font-weight: bolder;
+    margin: 40px auto 0px;
+    overflow: hidden;
+    padding: 4px 6px;
+    position: relative;
+    text-align: center;
+    height: 50px;
+    min-height: 50px;
+    width: 70%;
+}
+
+.tapa {
+    background-color: white;
+    height: 100%;
+    position: absolute;
+    left: 100%;
+    top: 0px;
+    width: 100%;
+    z-index: 2;
+    animation: 2s retirada 1;
+}
+
+/* Animaciones */
+
+.aparicion {
+    animation: 2s aparicion 1;
+}
+
+@keyframes aparicion {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.balanceo:hover {
+    animation: 1s balanceo 1;
+}
+
+@keyframes balanceo {
+    20% {
+        transform: scale(0.7) rotate(4deg);
+    }
+    30%, 70% {
+        transform: scale(1.1) rotate(-4deg);
+    }
+    50%, 90% {
+        transform: scale(1.1) rotate(4deg);
+    }
+}
+
+.cambia_color:hover {
+    animation: 5s cambia_color 1;
+}
+
+@keyframes cambia_color {
+    50% {
+        background-color: yellowgreen;
+        height: 500px;
+    }
+    80% {
+        background-color: teal;
+    }
+}
+
+.cartel:hover {
+    animation: 1s cartel 1;
+    transform-origin: top center;
+}
+
+@keyframes cartel {
+    20% {
+        transform: rotate(15deg);
+    }
+    40% {
+        transform: rotate(-10deg);
+    }
+    60% {
+        transform: rotate(5deg);
+    }
+    80% {
+        transform: rotate(-3deg);
+    }
+}
+
+.chicle:hover {
+    animation: 0.7s chicle 1;
+}
+
+@keyframes chicle {
+    30% {
+        transform: scale(1.25, 0.75);
+    }
+    50% {
+        transform: scale(0.75, 1.25);
+    }
+    60% {
+        transform: scale(1.15, 0.85);
+    }
+}
+
+.click:hover {
+    animation: 0.7s click 1;
+}
+
+@keyframes click {
+    25%, 75% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.descolgado {
+    animation: 1s descolgado 1;
+    transform-origin: top left;
+}
+
+@keyframes descolgado {
+    20%, 60% {
+        transform: rotate(80deg);
+    }
+    40% {
+        transform: rotate(60deg);
+    }
+    80% {
+        opacity: 1;
+        transform: rotate(60deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(400px);
+    }
+}
+
+.flash:hover {
+    animation: 0.4s flash 1;
+}
+
+@keyframes flash {
+    50% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
+.giro {
+    animation: giro 1s 1;
+    transform-origin: center;
+}
+
+@keyframes giro {
+    0% {
+        opacity: 0;
+        transform: rotate(-200deg);
+    }
+}
+
+.giro-left {
+    animation: giro-left 1s 1;
+    transform-origin: left bottom;
+}
+
+@keyframes giro-left {
+    0% {
+        opacity: 0;
+        transform: rotate(-100deg);
+    }
+}
+
+.in-rotativo {
+    animation: 1s in-rotativo 1;
+}
+
+@keyframes in-rotativo {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) rotate(-260deg);
+    }
+}
+
+.out-rotativo {
+    animation: 1s out-rotativo 1;
+}
+
+@keyframes out-rotativo {
+    100% {
+        opacity: 0;
+        transform: translateX(100%) rotate(260deg);
+    }
+}
+
+.rebote {
+    animation: 2s rebote 1;
+}
+
+@keyframes rebote {
+    20%, 50%, 80% {
+        transform: translateY(0px);
+    }
+    40% {
+        transform: translateY(-45px);
+    }
+    60% {
+        transform: translateY(-25px);
+    }
+}
+
+.rebote-in {
+    animation: 1s rebote-in 1;
+}
+
+@keyframes rebote-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-2000px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(30px);
+    }
+    70% {
+        transform: translateX(-10px);
+    }
+}
+
+.rebote-in-top {
+    animation: 1s rebote-in-top 1;
+}
+
+@keyframes rebote-in-top {
+    0% {
+        opacity: 0;
+        transform: translateY(-2000px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    70% {
+        transform: translateY(-10px);
+    }
+}
+
+.rebote-in-right {
+    animation: 1s rebote-in-right 1;
+}
+
+@keyframes rebote-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(2000px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(-30px);
+    }
+    70% {
+        transform: translateX(10px);
+    }
+}
+
+.rebote-in-bottom {
+    animation: 1s rebote-in-bottom 1;
+}
+
+@keyframes rebote-in-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(2000px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    70% {
+        transform: translateY(10px);
+    }
+}
+
+.rebote-out {
+    animation: 1s rebote-out 1;
+}
+
+@keyframes rebote-out {
+    25% {
+        transform: scale(0.9);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.rebote-out-left {
+    animation: 1s rebote-out-left 1;
+}
+
+@keyframes rebote-out-left {
+    20% {
+        opacity: 1;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-2000px);
+    }
+}
+
+.rebote-out-top {
+    animation: 1s rebote-out-top 1;
+}
+
+@keyframes rebote-out-top {
+    20% {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-2000px);
+    }
+}
+
+.rebote-out-right {
+    animation: 1s rebote-out-right 1;
+}
+
+@keyframes rebote-out-right {
+    20% {
+        opacity: 1;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(2000px);
+    }
+}
+
+.rebote-out-bottom {
+    animation: 1s rebote-out-bottom 1;
+}
+
+@keyframes rebote-out-bottom {
+    20% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(2000px);
+    }
+}
+
+@keyframes retirada {
+    0% {
+        left: 0px;
+    }
+}
+
+.vaiven:hover {
+    animation: 1s vaiven 1;
+}
+
+@keyframes vaiven {
+    15% {
+        transform: rotate(-10deg) translateX(-25%);
+    }
+    30% {
+        transform: rotate(5deg) translateX(20%);
+    }
+    45% {
+        transform: rotate(-3deg) translateX(-10%);
+    }
+    60% {
+        transform: rotate(2deg) translateX(5%);
+    }
+    75% {
+        transform: rotate(-1deg) translateX(-3%);
+    }
+}
+
+.vibracion:hover {
+    animation: 1s vibracion infinite;
+}
+
+@keyframes vibracion {
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+    5%, 25%, 45%, 65%, 85% {
+        transform: translateY(-10px);
+    }
+    15%, 35%, 55%, 75% {
+        transform: translateY(10px);
+    }
+}
+
+.veloz-in {
+    animation: 1s veloz-in 1;
+}
+
+@keyframes veloz-in {
+    0% {
+        opacity: 0;
+        transform: skewX(80deg) translateX(-200%);
+    }
+    70% {
+        opacity: 1;
+        transform: skewX(-20deg) translateX(-10%);
+    }
+    90% {
+        transform: skewX(10deg);
+    }
+}
+
+.veloz-out {
+    animation: 1s veloz-out 1;
+}
+
+@keyframes veloz-out {
+    15% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: skewX(-80deg) translateX(-200%);
+    }
+}
